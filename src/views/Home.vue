@@ -30,7 +30,9 @@ export default {
     changeQueryString() {
       this.$router.replace({ query: { fruit: this.fruit.toLowerCase() } });
     },
-    removeQueryString() {},
+    removeQueryString() {
+      this.$router.replace({name: 'Home'})
+    },
   },
   watch: {
     $route() {},

@@ -1,4 +1,5 @@
 # query-strings
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cd65d93f-32eb-4e53-a0b5-e753c99f3f48/deploy-status)](https://app.netlify.com/sites/condescending-mccarthy-771f7c/deploys)
 
 ## Project setup
 ```
