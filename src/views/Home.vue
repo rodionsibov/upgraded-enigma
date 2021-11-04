@@ -1,16 +1,20 @@
 <template>
   <div class="container">
     <h1>Change Query String</h1>
-    <div class="input">
+    <div>
       <label for="">Enter a fruit name: </label>
       <input type="text" v-model="fruit" />
     </div>
     <div v-if="correctAnswer">
       <p class="message">{{ this.message }}</p>
     </div>
-    <div class="btn">
-      <button @click="changeQueryString">Update Query String</button>
-      <button @click="removeQueryString">Remove Query String</button>
+    <div class="buttons">
+      <button class="btn-large" @click="changeQueryString">
+        Update Query String
+      </button>
+      <button class="btn-large" @click="removeQueryString">
+        Remove Query String
+      </button>
     </div>
   </div>
 </template>
@@ -41,42 +45,25 @@ export default {
       if (this.$route.query.fruit === "apple") {
         this.correctAnswer = !this.correctAnswer;
         this.message = "Congrats, you found the lucky fruit!";
+      } else {
+        this.correctAnswer = null;
       }
-      // } else {
-      //   this.correctAnswer = null;
-      // }
     },
   },
 };
 </script>
 
 <style>
-.container {
+.buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 10px;
-}
-
-.btn {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .message {
-  padding: 20px;
-  margin: 0;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #42b983;
-}
-
-input {
-  display: block;
-  font-size: 2rem;
-  padding: 10px;
-  margin: 10px auto;
-  width: 90%;
+  color: tomato;
 }
 </style>
